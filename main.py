@@ -1,12 +1,3 @@
-#    Sample main.py Tornado file
-#    (for Tornado on Heroku)
-#
-#    Author: Mike Dory | dory.me
-#    Created: 11.12.11 | Updated: 06.02.13
-#    Contributions by Tedb0t, gregory80
-#
-# ------------------------------------------
-
 #!/usr/bin/env python
 import os.path
 import tornado.escape
@@ -19,8 +10,6 @@ import tornado.web
 from tornado.options import define
 define("port", default=5000, help="run on the given port", type=int)
 
-
-# application settings and handle mapping info
 class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
@@ -33,24 +22,14 @@ class Application(tornado.web.Application):
         )
         tornado.web.Application.__init__(self, handlers, **settings)
 
-
-# the main page
 class MainHandler(tornado.web.RequestHandler):
     def get(self, q):
-        if 'GOOGLEANALYTICSID' in os.environ:
-            google_analytics_id = os.environ['GOOGLEANALYTICSID']
-        else:
-            google_analytics_id = False
-
         self.render(
             "main.html",
             page_title='Heroku Funtimes',
-            page_heading='Hi!',
-            google_analytics_id=google_analytics_id,
+            page_heading='Hi!'
         )
 
-
-# RAMMING SPEEEEEEED!
 def main():
     tornado.options.parse_command_line()
     http_server = tornado.httpserver.HTTPServer(Application())
