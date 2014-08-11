@@ -12,6 +12,7 @@ d. testing async python app.
 **Specifications**:
 
 **Short**:
+
 1. Http running at any python-installed machine with no external lib installing;
 2. Responce to “find top 10 IT companies in Russia”;
 3. Responce to “find quantity of vacancies for top 10”;
