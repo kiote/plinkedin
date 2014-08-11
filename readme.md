@@ -48,11 +48,20 @@ Software development plan
 
 Top-10 risks list
 ----
-1. Lost interest. If I'm as a mainteiner will loose the intrest to the project.
+1. Lost interest. 
+   If I'm as a mainteiner will loose the intrest to the project.
    Result: project will stop.
-2. Lack of skills. Too much time to making simple tasks.
+2. Lack of skills. 
+   Too much time to making simple tasks.
    Result: project will lasts too much time. Risk 1 turns real.
-3. Too much time. Wasting time and not making project move.
+3. Too much time. 
+   Wasting time and not making project move.
    Result: project will lasts too much time. Risk 1 turns real.
+4. Low quality.
+   Reduce: Use code standards, use testing
+5. Can't or too much time to run in production.
+   Reduce: try to run on production at early stages. Try to run via tunnelbrick
+6. Unstable tools
+   Reduce: -
    
-How to avoid/reduce: remember about the mission. Set propper deadlines. Make good plan and follow it.
+How to avoid/reduce: remember about the mission. Set propper deadlines. Make good plan and follow it. Make acceptance tests.
