@@ -1,43 +1,45 @@
+import os.path
+import tornado.escape
+import tornado.httpserver
 import tornado.ioloop
+import tornado.options
 import tornado.web
-import logging
-import sys
-import os
 
-from tornado.gen import coroutine
-from tornado.httpclient import AsyncHTTPClient, HTTPRequest, HTTPError
+# import and define tornado-y things
+from tornado.options import define
+define("port", default=5000, help="run on the given port", type=int)
 
-logging.warning('tornado')
+
+# application settings and handle mapping info
+class Application(tornado.web.Application):
+    def __init__(self):
+        handlers = [
+            (r"/([^/]+)?", MainHandler)
+        ]
+        settings = dict(
+            template_path=os.path.join(os.path.dirname(__file__), "templates"),
+            static_path=os.path.join(os.path.dirname(__file__), "static"),
+            debug=True,
+        )
+        tornado.web.Application.__init__(self, handlers, **settings)
+
 
 class MainHandler(tornado.web.RequestHandler):
-  def initialize(self):
-    self.client = AsyncHTTPClient()
-
-  @coroutine
-  def get(self):
-    yield self.handle()
-
-  @coroutine
-  def handle(self):
-    logging.warning(self.request.method)
-
-    request = HTTPRequest(
-        url='http://yandex.ru',
-        method=self.request.method
+  def get(self, q):
+    self.render(
+        "main.html",
+        page_title='Heroku Funtimes',
+        page_heading='Hi!'
     )
-    
-    try:
-      response = yield self.client.fetch(request)
-      logging.warning(response)
-    finally:
-      self.write("response")
-      self.finish() 
 
-application = tornado.web.Application([
-  (r"/", MainHandler),
-])
+def main():
+    tornado.options.parse_command_line()
+    http_server = tornado.httpserver.HTTPServer(Application())
+    http_server.listen(tornado.options.options.port)
+
+    # start it up
+    tornado.ioloop.IOLoop.instance().start()
+
 
 if __name__ == "__main__":
-  port = int(os.environ.get("PORT", 5000))
-  application.listen(5000)
-  tornado.ioloop.IOLoop.instance().start()
+    main()
