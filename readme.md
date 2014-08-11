@@ -41,3 +41,16 @@ Quality assuarance plan
 Software development plan
 ----
 [google doc](https://docs.google.com/spreadsheets/d/10OBG5gPGC5YATgCJHDJoNUr6Q8I1h7dYXLaqucDWxRA)
+
+Top-10 risks list
+----
+1. Lost interest. If I'm as a mainteiner will loose the intrest to the project.
+   Result: project will stop.
+   
+2. Lack of skills. Too much time to making simple tasks.
+   Result: project will lasts too much time. Risk 1 turns real.
+   
+3. Too much time. Wasting time and not making project move.
+   Result: project will lasts too much time. Risk 1 turns real.
+   
+How to avoid: remember about the mission. Set propper deadlines. Make good plan and follow it.
