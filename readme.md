@@ -21,10 +21,14 @@ Specifications
 1. Http running at any python-installed machine with no external lib installing;
 2. json responce to json request: “find top 10 IT companies in Russia”;
 3. json responce to json request: “find quantity of vacancies for top 10”;
-3. Cashing responce from API for 5 minutes.
+4. Cashing responce from API for 5 minutes.
+5. User should be able to register and save API credentials.
 
 **Installation**
-Serever able to run with no installation. API keys putted to yaml-file.
+Serever able to run with no installation.
+
+**Production**
+Project should run on any public-available serever.
 
 Architecture
 ----
