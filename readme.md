@@ -6,10 +6,17 @@ Mission
 ----
 
 1. Get practical skills with:
-a. Tornado async web framework;
-b. Python 2.7;
-c. Linkedin API;
-d. testing async python app.
+
+1.1. Tornado async web framework;
+
+1.2. Python 2.7;
+
+1.3. Linkedin API;
+
+1.4. testing async python app;
+
+1.5. mogoDB.
+
 2. Demostrate the way of coding and testing on github
 
 Specifications
@@ -33,3 +40,10 @@ Architecture
 3. http/json as interface;
 4. Oauth for authorization;
 5. Unit Tests and mock for testing
+
+Quality assuarance plan
+----
+
+Software development plan
+----
+[google doc](https://docs.google.com/spreadsheets/d/10OBG5gPGC5YATgCJHDJoNUr6Q8I1h7dYXLaqucDWxRA)
