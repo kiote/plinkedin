@@ -55,4 +55,4 @@ Top-10 risks list
 3. Too much time. Wasting time and not making project move.
    Result: project will lasts too much time. Risk 1 turns real.
    
-How to avoid: remember about the mission. Set propper deadlines. Make good plan and follow it.
+How to avoid/reduce: remember about the mission. Set propper deadlines. Make good plan and follow it.
