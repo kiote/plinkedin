@@ -6,17 +6,11 @@ Mission
 ----
 
 1. Get practical skills with:
-
-1.1. Tornado async web framework;
-
-1.2. Python 2.7;
-
-1.3. Linkedin API;
-
-1.4. testing async python app;
-
-1.5. mogoDB.
-
+    * Tornado async web framework;
+    * Python 2.7;
+    * Linkedin API;
+    * testing async python app;
+    * mogoDB.
 2. Demostrate the way of coding and testing on github
 
 Specifications
