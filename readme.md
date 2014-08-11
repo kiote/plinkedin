@@ -1,6 +1,6 @@
-Project name: Linkedin Tornado API
+**Project name**: Linkedin Tornado API
 
-Mission: 
+**Mission**: 
 
 1. Get practical skills with:
 a. Tornado async web framework;
@@ -9,13 +9,13 @@ c. Linkedin API;
 d. testing async python app.
 2. Demostrate the way of coding and testing on github
 
-Specifications:
+**Specifications**:
 
-Short:
+**Short**:
 1. Http running at any python-installed machine with no external lib installing;
 2. Responce to “find top 10 IT companies in Russia”;
 3. Responce to “find quantity of vacancies for top 10”;
 3. Cashing responce from API for 5 minutes.
 
-Installation:
+**Installation**:
 Serever able to run with no installation. API keys putted to yaml-file.
