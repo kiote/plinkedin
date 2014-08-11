@@ -2,6 +2,7 @@ import tornado.ioloop
 import tornado.web
 import logging
 import sys
+import os
 
 from tornado.gen import coroutine
 from tornado.httpclient import AsyncHTTPClient, HTTPRequest, HTTPError
@@ -37,5 +38,6 @@ application = tornado.web.Application([
 ])
 
 if __name__ == "__main__":
+  port = int(os.environ.get("PORT", 5000))
   application.listen(5000)
   tornado.ioloop.IOLoop.instance().start()
