@@ -1,0 +1,4 @@
+state = "PnSVuRbxFYRUGS6f"
+redirect_url = "http://protected-waters-8043.herokuapp.com/"
+linkedin_oauth = "https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=%s&state=%s&redirect_uri=%s"
+client_id = "750kim7p2hzmr3"
