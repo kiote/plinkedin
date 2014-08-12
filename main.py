@@ -5,6 +5,9 @@ import tornado.httpserver
 import tornado.ioloop
 import tornado.web
 
+from handlers.auth import AuthHandler
+from handlers.main import MainHandler
+
 # import and define tornado-y things
 from tornado.options import define, options
 
@@ -31,19 +34,6 @@ class Application(tornado.web.Application):
       debug=True,
     )
     tornado.web.Application.__init__(self, handlers, **settings)
-
-class MainHandler(tornado.web.RequestHandler):
-  def get(self):
-    self.render(
-      "main.html",
-      page_title='Heroku Funtimes',
-      page_heading='Hi!'
-    )
-
-class AuthHandler(tornado.web.RequestHandler):
-  def get(self):
-    self.redirect( tornado.options.options.linkedin_oauth % (tornado.options.options.client_id, \
-      tornado.options.options.state, tornado.options.options.redirect_url))
 
 def main():
   tornado.options.parse_command_line()
