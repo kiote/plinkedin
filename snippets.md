@@ -5,6 +5,9 @@ run inside virtual env:
 
 ```virtualenv venv```
 
+activate virtual env:
+```source venv/bin/activate```
+
 ```pip install tornado```
 
 freeze requirenments

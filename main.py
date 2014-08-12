@@ -8,6 +8,7 @@ import tornado.web
 # import and define tornado-y things
 from tornado.options import define, options
 
+# options
 define("port", default=5000, help="run on the given port", type=int)
 define("state", default="abcd", help="Used to prevent CSRF", type=str)
 define("redirect_url", default="http://protected-waters-8043.herokuapp.com/", \
