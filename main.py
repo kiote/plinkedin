@@ -11,10 +11,9 @@ from handlers.main import MainHandler
 # import and define tornado-y things
 from tornado.options import options
 
-import options
-
 import logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 class Application(tornado.web.Application):
   def __init__(self):

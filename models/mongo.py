@@ -2,23 +2,25 @@ import pymongo
 import os
 
 from lib.singleton import Singleton
+from urlparse import urlparse
 
 MONGO_URL = os.environ.get('MONGOLAB_URI')
  
 @Singleton
 class MongoDb:
-  def connect(self):
-    if MONGO_URL:
-      # Get a connection
-      conn = pymongo.Connection(MONGO_URL)
-      # Get the database
-      db = conn[urlparse(MONGO_URL).path[1:]]
-    else:
-      # Not on an app with the MongoHQ add-on, do some localhost action
-      conn = pymongo.Connection()
-      db = conn['testdb']
+    @staticmethod
+    def connect():
+        if MONGO_URL:
+            # Get a connection
+            conn = pymongo.Connection(MONGO_URL)
+            # Get the database
+            db = conn[urlparse(MONGO_URL).path[1:]]
+        else:
+            # Not on an app with the MongoHQ add-on, do some localhost action
+            conn = pymongo.Connection()
+            db = conn['testdb']
 
-    return db
+        return db
 
 # collection = MongoDb.Instance.connect 
 # # Test stuff
