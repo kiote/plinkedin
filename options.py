@@ -7,3 +7,4 @@ define("redirect_url", default="http://protected-waters-8043.herokuapp.com/", \
   help="OAuth2 redirect URL", type=str)
 define("client_id", default="wrong", help="Value of API key", type=str)
 define("linkedin_oauth", default="wrong", help="LinkedIn OAuth URL", type=str)
+define("code", default="wrong", type=str)
